@@ -18,63 +18,71 @@
                 <h3 id="money-title" class="title is-3">Money made: $0</h3>
             </div>
             <br>
-            <div class="tile is-ancestor">
+            <div class="container">
                 <h3 class="title is-3">Kitchen</h3>
-                <div id="first-tile" class="tile" data-filled="False">
-                    <article class="tile is-child notification is-info">
-                        <p id="first-title" class="title">Left tile</p>
-                        <a class="delete" onclick="closeTile('first-tile')"></a>
-                        <p class="subtitle" data-seconds="0">Time: 0 sec</p>
-                        <a class="button is-dark" onclick="cook('first')">Cook</a>
-                    </article>
-                </div>
-                <div id="second-tile" class="tile" data-filled="False">
-                    <article class="tile is-child notification is-info">
-                        <p id="second-title" class="title">Middle tile</p>
-                        <a class="delete" onclick="closeTile('second-tile')"></a>
-                        <p class="subtitle" data-seconds="0">Time: 0 sec</p>
-                        <a class="button is-dark" onclick="cook('second')">Cook</a>
-                    </article>
-                </div>
-                <div id="third-tile" class="tile" data-filled="False">
-                    <article class="tile is-child notification is-info">
-                        <p id="third-title" class="title">Right tile</p>
-                        <a class="delete" onclick="closeTile('third-tile')"></a>
-                        <p class="subtitle" data-seconds="0">Time: 0 sec</p>
-                        <a class="button is-dark" onclick="cook('third')">Cook</a>
-                    </article>
+                <div class="tile is-ancestor">
+                    <div id="first-tile" class="tile is-parent" data-filled="False">
+                        <article class="tile is-child notification is-info">
+                            <p id="first-title" class="title">Left tile</p>
+                            <a class="delete" onclick="closeTile('first-tile')"></a>
+                            <p class="subtitle" data-seconds="0">Time: 0 sec</p>
+                            <a class="button is-dark" onclick="cook('first')">Cook</a>
+                        </article>
+                    </div>
+                    <div id="second-tile" class="tile is-parent" data-filled="False">
+                        <article class="tile is-child notification is-info">
+                            <p id="second-title" class="title">Middle tile</p>
+                            <a class="delete" onclick="closeTile('second-tile')"></a>
+                            <p class="subtitle" data-seconds="0">Time: 0 sec</p>
+                            <a class="button is-dark" onclick="cook('second')">Cook</a>
+                        </article>
+                    </div>
+                    <div id="third-tile" class="tile is-parent" data-filled="False">
+                        <article class="tile is-child notification is-info">
+                            <p id="third-title" class="title">Right tile</p>
+                            <a class="delete" onclick="closeTile('third-tile')"></a>
+                            <p class="subtitle" data-seconds="0">Time: 0 sec</p>
+                            <a class="button is-dark" onclick="cook('third')">Cook</a>
+                        </article>
+                    </div>
                 </div>
             </div>
-            <div>
+            <br>
+            <div class="container">
                 <h3 class="title is-3">Pick an item to cook:</h3>
                 <div class="box" onclick="findEmpty('Dumplings', 10)">
                     <p>
                         <strong>Dumplings</strong>
                         10 secs
+                        <i>$1</i>
                     </p>                
                 </div>
                 <div class="box" onclick="findEmpty('Egg Tarts', 20)">
                     <p>
                         <strong>Egg Tarts</strong>
                         20 secs
+                        <i>$2</i>
                     </p>                
                 </div>
                 <div class="box" onclick="findEmpty('Croissants', 30)">
                     <p>
                         <strong>Croissants</strong>
                         30 secs
+                        <i>$3</i>
                     </p>                
                 </div>
                 <div class="box" onclick="findEmpty('Baguettes', 40)">
                     <p>
                         <strong>Baguettes</strong>
                         40 secs
+                        <i>$4</i>
                     </p>                
                 </div>
                 <div class="box" onclick="findEmpty('Bagels', 50)">
                     <p>
                         <strong>Bagels</strong>
                         50 secs
+                        <i>$5</i>
                     </p>                
                 </div>
             </div>

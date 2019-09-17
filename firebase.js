@@ -18,7 +18,6 @@ fetch(kitchensURL)
     kitchenOneData = json["kitchen-1"];
     kitchenTwoData = json["kitchen-2"];
     kitchenThreeData = json["kitchen-3"];
-    console.log(kitchenTwoData);
     var firstTile = document.getElementById("first-tile");
     var secondTile = document.getElementById("second-tile");   
     var thirdTile = document.getElementById("third-tile");  
@@ -34,13 +33,10 @@ fetch(kitchensURL)
 
     secondTile.setAttribute("data-filled", kitchenTwoData.filled);
     if (kitchenTwoData.filled === "True"){
-        console.log('hello');
         kitchenTwoFood = kitchenTwoData.food;
-        console.log(kitchenTwoFood);
         var secondTitle = document.getElementById("second-title");
         secondTitle.innerText = kitchenTwoFood.name;
         var secondSub = secondTile.querySelector('.subtitle');
-        console.log(secondSub);
         secondSub.innerText = "Time: " + kitchenTwoFood.time + " secs";      
 
     }
@@ -103,7 +99,6 @@ function finishCook(foodTextIndex) {
                 }).then(function (response) { // At this point, Flask has printed our JSON
                     return response.text();
                 }).then(function (text) {
-                    console.log("works");
                     moneyTitle = document.getElementById("money-title");
                     moneyTitle.innerText = "Money made: $" + balance;
                 });
